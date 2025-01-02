@@ -9,7 +9,7 @@
 pstrlen: 
 	
 	pushq	 %rbp
-    movq	 %rsp, %rbp
+    	movq %rsp, %rbp
 	
 	# move 1 byte to rax for the length
 	movzbq	 (%rdi), %rax
@@ -24,7 +24,7 @@ pstrlen:
 .type	replaceChar, @function
 replaceChar:
 	pushq	 %rbp
-    movq	 %rsp, %rbp
+    	movq	 %rsp, %rbp
 
 	# &rdi-pstring, rsi- old char, rdx- new char
 
@@ -65,7 +65,7 @@ replaceChar:
 pstrijcpy:
 # keep the variables in stack. its need to keep after isvalid function
 	pushq	 %rbp
-    movq	 %rsp, %rbp
+    	movq	 %rsp, %rbp
 	pushq	 %rdi
 	pushq 	 %rsi
 	pushq	 %rdx
@@ -105,7 +105,7 @@ isValid:
 	
 	# &rdi-pstring1, &rsi- pstring2, rdx- i, rcx- j
 	pushq	 %rbp
-    movq	 %rsp, %rbp
+    	movq	 %rsp, %rbp
 	
 	call	 pstrlen
 	
@@ -156,7 +156,7 @@ isValid:
 #rdi-pstring1
 swapCase:
 	pushq	 %rbp
-    movq	 %rsp, %rbp
+    	movq	 %rsp, %rbp
 
 	call	 pstrlen
 
@@ -221,7 +221,7 @@ pstrijcmp:
 
 # keep the variables in stack. its need to keep after isvalid function
 	pushq	 %rbp
-    movq	 %rsp, %rbp
+    	movq	 %rsp, %rbp
 	pushq	 %rdi
 	pushq	 %rsi
 	pushq	 %rdx
